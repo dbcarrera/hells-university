@@ -1,4 +1,4 @@
-// Creates a custom header class that can be reused without writing a lot of boilerplate code.
+// Creates a custom footer class that can be reused without writing a lot of boilerplate code.
 class Footer extends HTMLElement {
     constructor() {
         super();
