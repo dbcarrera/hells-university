@@ -101,7 +101,7 @@ button:hover {
     justify-content: center;
     outline: none;
     cursor: pointer;
-    background: #724ae8;
+    background: #aa1400;
     border-radius: 50%;
     transition: all 0.2 ease;
 }
@@ -172,7 +172,7 @@ button:hover {
     width: 32px;
     color: #fff;
     align-self: flex-end;
-    background: #724ae8;
+    background: #aa1400;
     text-align: center;
     line-height: 32px;
     border-radius: 4px;
@@ -225,10 +225,10 @@ button:hover {
     align-self: flex-end;
     height: 55px;
     line-height: 55px;
-    color: #724ae8;
+    color: #aa1400;
     font-size: 1.35rem;
     cursor: pointer;
-    background: grey;
+    background: transparent;
     visibility: hidden;
 }
 .chat-input textarea:valid ~ span {
