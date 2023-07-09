@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Questrial', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 2%;
+    background-color: white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: fixed;
+    width: 100%;
+    box-shadow: 4px 2px rgba(10, 10, 10, 0.05);
+}
+
+.welcome-page {
+    background-color: white;
+    padding: 37px;
+    width: auto;
+    right: 1px;
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.nav-link li a.active-nav {
+    color: #aa1400;
+}
+
+.nav-link {
+    list-style: none;
+
+}
+
+.nav-link li {
+    display: inline-block;
+    padding: 0px 10px;
+
+}
+
+.nav-link li a {
+    color: #1F4276;
+    font-size: 24px;
+    transition: all 0.15s ease 0s;
+}
+
+.nav-link li a:hover {
+    color: #aa1400
+}
+
+.default-logo {
+    height: 100px;
+}
+
+.fullscreen-img {
+    width: 100%;
+    height: auto;
+}
+
+.copyright {
+    padding: 25px 25px;
+    font-size: 18px;
+}
+
+
+button {
+    padding: 9px 25px;
+    background-color: #1F4276;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover {
+    background-color: #AA1400;
+}
