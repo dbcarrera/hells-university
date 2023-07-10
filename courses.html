@@ -11,51 +11,34 @@
     <!--Adds favicon.-->
     <link rel="icon" type="image/x-icon" href="/assets/default_logo.png">
 
-    <!--Uses external javascript to highlight the current active navigation element.-->
-    <script defer src="active_nav.js"></script>
+    <!--Symbol assets.-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
 
     <title>Hell's University</title>
 </head>
 
 <body>
     <!--Creates the top header navigation bar that sticks as you scroll down.-->
-    <header>
-        <img class="default-logo" src="assets/default_logo.png" alt="default_logo">
-        <nav>
-            <ul class="nav-link">
-                <li>
-                    <a class="" href="index.html">Welcome</a>
-                </li>
-                <li>
-                    <a href="courses.html">Courses</a>
-                </li>
-                <li>
-                    <a href="contact.html">Contact</a>
-                </li>
-                <li>
-                    <a href="campus.html">Campus</a>
-                </li>
-                <li>
-                    <a href="about.html">About</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+    <header-main></header-main>
+    <!--Adds chatbot.-->
+    <custom-chatbot></custom-chatbot>
 
-    <!--Applies the art made for the welcome page-->
-    <img class="fullscreen-img" src="assets/welcome.svg" alt="Main Page">
+    <main>
+        <img class="course-campus" src="assets/campus_1.jpg" alt="Campus Image">
+        <div class="container">
+            <img class="course-ramsay" src="assets/Ramsay picture.jpg" alt="Ramsay Image">
+            <img class="logo-fade" src="assets/Logo Fade.png" alt="Hell's University Logo Fade">
+        </div>
+    </main>
 
     <!--Creates the copyright footer at the bottom that displays copyright and location information, as well as a disclaimer.-->
-    <footer>
-        <p class="copyright">Copyright ©2023 Hell's University
-            <br><br>
-            Massachusetts Hall, Cambridge, MA 02138, USA
-            <br>
-            (702) 731-7373
-            <br>
-            <br>
-            DISCLAIMER: Hell's University shall not be liable for any loss or damage caused by the usage of any information obtained from this site or representatives.</p>
-    </footer>
-</body>
-</html>
+    <footer-main></footer-main>
 
+    <!--Custom header and footer elements and script for chatbot-->
+    <script defer src="components/header.js"></script>
+    <script defer src="components/footer.js"></script>
+    <script defer src="components/chatbot_element.js"></script>
+    <script defer src="scripts/chatbot.js"></script>
+</body>
+
+</html>
