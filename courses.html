@@ -31,7 +31,7 @@
             <img class="course-campus" src="assets/campus_1.jpg" alt="Campus Image">
 
 
-            <img class="course-ramsay" src="assets/Ramsay picture.jpg" alt="Ramsay Image">
+            <img class="fullscreen-img" src="assets/Ramsay picture.jpg" alt="Ramsay Image">
             <img class="logo-fade" src="assets/Logo Fade.png" alt="Hell's University Logo Fade">
 
             <!--Creates glass cards. left and top attribute using script below to avoid inline css-->
@@ -52,7 +52,7 @@
 
             <div class="card" data-left="52.5%" data-tilt="5">
                 <div class="content">
-                    <img class="fullscreen-img" src="assets/poissonnier.jpg" alt="Saucier Image">
+                    <img class="fullscreen-img" src="assets/poissonnier.jpg" alt="Poissonnier Image">
                     <h2>Poissonneir<br><br></h2>
                     <p>The poissonneir is in charge of preparing all fish and seafood related dishes.<br><br>
 
@@ -66,7 +66,7 @@
 
             <div class="card" data-left="17.5%" data-top="100%" data-isLong="true" data-tilt="5">
                 <div class="content">
-                    <img class="fullscreen-img" src="assets/Rotisseur.jpg" alt="Saucier Image">
+                    <img class="fullscreen-img" src="assets/Rotisseur.jpg" alt="Rotisseur Image">
                     <h2>Rotisseur<br><br></h2>
                     <p>A rotisseur is the master of all things meat, from red to white.<br><br>
 
@@ -80,7 +80,7 @@
 
             <div class="card" data-left="17.5%" data-top="142%" data-tilt="5">
                 <div class="content">
-                    <img class="fullscreen-img" src="assets/entremetier.png" alt="Saucier Image">
+                    <img class="fullscreen-img" src="assets/entremetier.png" alt="Entremetier Image">
                     <h2>Entremetier<br><br></h2>
                     <p>As an entremetier you are expected to prepare all the dishes which do not involve meat, or
                         seafood.<br><br>
@@ -94,7 +94,7 @@
 
             <div class="card" data-left="52.5%" data-top="142%" data-tilt="5">
                 <div class="content">
-                    <img class="fullscreen-img" src="assets/patissier.png" alt="Saucier Image">
+                    <img class="fullscreen-img" src="assets/patissier.png" alt="Patissier Image">
                     <h2>Pâtissier<br><br></h2>
                     <p>A pâtissier prepares all sweet foods, such as desserts.<br><br>
 
@@ -104,7 +104,7 @@
                         This course will train you to be creative and knowledgeable about pastries.</p>
                     <a data-open-modal>Read More</a>
                     <dialog data-modal>
-                        <div>Hello!</div>
+                        <div class="overlay"><img class="fullscreen-img" src="assets/course_modal_background.png" alt="Course Modal Image"></div>
                         <button class="material-symbols-outlined" data-close-modal>close</button>
                     </dialog>
                 </div>
@@ -127,6 +127,9 @@
     <script defer src="components/chatbot_element.js"></script>
     <script defer src="scripts/chatbot.js"></script>
 
+    <!--Opens dialog box (In this case a modal). -->
+    <script defer src="scripts/modal.js"></script>
+
     <!--Glass Morphism scripts-->
     <script type="text/javascript" src="scripts/vanilla-tilt.js"></script>
     <script>
@@ -137,48 +140,6 @@
         });
     </script>
     <script defer src="scripts/course_card_array.js"></script>
-
-    <!--Opens dialog box-->
-    <script>
-        // Gathers all the buttons that are meant to open modals.
-        const openButton = document.querySelector("[data-open-modal]");
-        const closeButton = document.querySelector("[data-close-modal]");
-        const modal = document.querySelector("[data-modal]");
-
-        // Whenever user clicks on the Read More button, it opens the modal.
-        openButton.addEventListener("click", () => {
-            modal.showModal();
-            modal.style.opacity = "1"
-            modal.style.transform = "translateY(0%)"
-        });
-
-        // Closes modal.
-        closeButton.addEventListener("click", () => {
-            modal.close();
-            modal.style.opacity = "0"
-            modal.style.transform = "translateY(25%)"
-        });
-
-        // Whenever user clicks off the modal it will close it.
-        modal.addEventListener("click", e => {
-            const dialogDimensions = modal.getBoundingClientRect()
-            if (
-                e.clientX < dialogDimensions.left ||
-                e.clientX > dialogDimensions.right ||
-                e.clientY < dialogDimensions.top ||
-                e.clientY > dialogDimensions.bottom
-            ) {
-                modal.close();
-                modal.style.opacity = "0"
-                modal.style.transform = "translateY(25%)"
-            };
-        });
-
-
-
-
-
-    </script>
 </body>
 
 </html>
