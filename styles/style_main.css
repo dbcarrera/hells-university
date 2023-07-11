@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 
+/* Main CSS to be applied to every page */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -10,12 +11,8 @@
     text-decoration: none;
 }
 
-.container {
-    position: relative;
-    z-index: -1;
-}
 
-header {
+.header-main {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -74,44 +71,9 @@ header {
     height: auto;
 }
 
-.course-campus {
-    width: 100%;
-    height: 190vh;
-    object-fit: cover;
-    object-position: 0% 50%;
-    display: block;
-}
-
-.course-ramsay {
-    width: 100%;
-    height: auto;
-}
-
-.logo-fade {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: auto;
-    transform: translateX(-100%);
-}
-
 .copyright {
     padding: 25px 25px;
     font-size: 18px;
-}
-
-
-button {
-    padding: 9px 25px;
-    background-color: #1F4276;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
-}
-
-button:hover {
-    background-color: #AA1400;
 }
 
 /* For the chatbot */
@@ -133,20 +95,24 @@ button:hover {
     transition: all 0.2s ease;
     z-index: 1;
 }
+
 .show-chatbot .chatbot-toggler {
     transform: rotate(90deg);
 }
+
 .chatbot-toggler span {
     position: absolute;
 }
+
 .show-chatbot .chatbot-toggler span:first-child,
 .chatbot-toggler span:last-child {
     opacity: 0;
-
 }
+
 .show-chatbot .chatbot-toggler span:last-child {
     opacity: 1;
 }
+
 .chatbot {
     position: fixed;
     right: 40px;
@@ -164,22 +130,26 @@ button:hover {
     transition: all 0.1s ease;
     z-index: 1;
 }
+
 .show-chatbot .chatbot {
     transform: scale(1);
     opacity: 1;
     pointer-events: auto;
 }
+
 .chatbot header {
     background: #aa1400;
     padding: 16px 0;
     text-align: center;
     position: relative;
 }
+
 .chatbot header h2 {
     color: #fff;
     font-size: 1.4rem;
     margin: 0 auto;
 }
+
 .chatbot header span {
     position: absolute;
     right: 20px;
@@ -188,14 +158,17 @@ button:hover {
     cursor: pointer;
     transform: translateY(-50%);
 }
+
 .chatbot .chatbox {
     height: 510px;
     overflow-y: auto;
     padding: 30px 20px 100px;
 }
+
 .chatbox .chat {
     display: flex;
 }
+
 .chatbox .incoming span {
     height: 32px;
     width: 32px;
@@ -208,10 +181,12 @@ button:hover {
     margin: 0 10px 7px 0;
 
 }
+
 .chatbox .outgoing {
     margin: 20px 0;
     justify-content: flex-end;
 }
+
 .chatbox .chat p {
     color: #fff;
     max-width: 75%;
@@ -221,15 +196,18 @@ button:hover {
     border-radius: 10px 10px 0 10px;
     background: #aa1400;
 }
+
 .chatbox .chat p.error {
     color: #aa1400;
     background: #f8d7da;
 }
+
 .chatbox .incoming p {
     color: #000;
     background: #f2f2f2;
     border-radius: 10px 10px 10px 0;
 }
+
 .chatbot .chat-input {
     position: absolute;
     bottom: 0;
@@ -240,6 +218,7 @@ button:hover {
     padding: 5px 20px;
     border-top: 1px solid #ccc;
 }
+
 .chat-input textarea {
     height: 55px;
     width: 100%;
@@ -250,6 +229,7 @@ button:hover {
     resize: none;
     padding: 16px 15px 16px 0;
 }
+
 .chat-input span {
     align-self: flex-end;
     height: 55px;
@@ -260,131 +240,12 @@ button:hover {
     background: transparent;
     visibility: hidden;
 }
+
 .chat-input textarea:valid ~ span {
     visibility: visible;
 }
 
-/* For Contact page */
-.container-contact {
-    position: absolute;
-    top: 120px;
-    right: 0px;
-    max-width: 700px;
-    width: 100%;
-    padding: 25px;
-    background: #1B1919;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-
-}
-
-.container-contact h2 {
-    font-size: 1.5rem;
-    color: #fff;
-    font-weight: 500;
-    text-align: center;
-}
-
-.container-contact .form {
-    margin-top: 30px;
-}
-
-.form .input-box {
-    width: 100%;
-    margin-top: 20px;
-}
-
-.input-box label {
-    color: #fff;
-}
-
-.form :where(.input-box input, .select-box) {
-    position: relative;
-    height: 50px;
-    width: 100%;
-    outline: none;
-    font-size: 1rem;
-    color: #707077;
-    margin-top: 8px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    padding: 0 15px;
-}
-
-.form .column {
-    display: flex;
-    column-gap: 15px;
-}
-
-.form .gender-box {
-    margin-top: 20px;
-}
-
-.gender-box h3 {
-    color: #fff;
-    font-size: 1rem;
-    font-weight: 400;
-    margin-bottom: 8px;
-}
-
-.form :where(.gender-option, .gender) {
-    display: flex;
-    align-items: center;
-    column-gap: 50px;
-    flex-wrap: wrap;
-    color: #fff;
-}
-
-.form .gender {
-    column-gap: 5px;
-}
-
-.gender input {
-    accent-color: #AA1400;
-}
-
-.form :where(.gender input, .gender label) {
-    cursor: pointer;
-}
-
-.course :where(input, .select-box) {
-    margin-top: 15px;
-}
-
-.select-box select {
-    height: 100%;
-    width: 100%;
-    outline: none;
-    border: none;
-    color: #707077;
-    font-size: 1rem;
-}
-
-/*Submit Button*/
-.form button {
-    height: 55px;
-    width: 100%;
-    color:#fff;
-    font-size: 1rem;
-    border: none;
-    margin-top: 30px;
-    cursor: pointer;
-    border-radius: 6px;
-    font-weight: 400;
-    transition: all 0.4s ease;
-    background-color: #aa1400;
-}
-
-.form button:hover {
-    background-color: #1F4276;
-}
-
-.form :where(.gender-option, .gender) {
-    row-gap: 15px;
-}
-
-
-@media(max-width: 500px) {
+@media(max-width: 490px) {
     .chatbot {
         right: 0;
         bottom: 0;
@@ -399,9 +260,5 @@ button:hover {
 
     .chatbot header span {
         display: block;
-    }
-
-    .form .column {
-        flex-wrap: wrap;
     }
 }

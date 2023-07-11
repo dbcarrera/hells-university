@@ -11,7 +11,7 @@ class Header extends HTMLElement {
         const isWelcomePage = windowPathName.includes('index.html');
 
         this.innerHTML = `
-        <header>
+        <header class="header-main">
         <!--If you are on the welcome page, there is no logo.-->
         <img class="default-logo" src="assets/default_logo.png" alt="default_logo">
         <nav>
