@@ -11,6 +11,14 @@
     text-decoration: none;
 }
 
+body {
+    background-color: black;
+}
+
+footer {
+    background-color: white;
+}
+
 
 .header-main {
     display: flex;
@@ -67,6 +75,7 @@
 }
 
 .fullscreen-img {
+    display: block;
     animation: showcontent 1s ease;
     width: 100%;
     height: auto;

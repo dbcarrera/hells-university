@@ -1,16 +1,19 @@
 /* For Contact page */
 body {
+    /* Sets background to a gradient that is fixed to the screen when scrolling. */
     background-image: linear-gradient(140deg, #dfdfdf, #202020, #0A0A0A);
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
 
+/* Picture of Gordon Ramsay. */
 .background-image {
     animation: showcontent 1.5s ease;
     padding-top: 90px;
     height: 130dvh;
 }
 
+/* Container for the contact text fields. */
 .container {
     animation: showcontent 0.8s ease;
     position: absolute;
@@ -24,6 +27,7 @@ body {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
+/* Name of the container, which says "Contact Us". */
 .container header {
     font-size: 1.5rem;
     color: #fff;
@@ -31,6 +35,7 @@ body {
     text-align: center;
 }
 
+/* Forms of the container */
 .container .form {
     margin-top: 30px;
 }
@@ -40,10 +45,12 @@ body {
     margin-top: 20px;
 }
 
+/* Label for each of the fields so user knows what it is */
 .input-box label {
     color: #fff;
 }
 
+/* For users to select a subject */
 .form :where(.input-box input, .select-box) {
     position: relative;
     height: 50px;
@@ -62,6 +69,7 @@ body {
     column-gap: 15px;
 }
 
+/* Radio buttons for user to select their gender */
 .form .gender-box {
     margin-top: 20px;
 }
@@ -131,12 +139,15 @@ body {
     row-gap: 15px;
 }
 
+/* Custom footer to ensure the contact container doesnt overlap */
 footer {
     position: absolute;
     top: 1080px;
     color: white;
+    background-color: transparent;
 }
 
+/* To ensure the forms are responsive */
 @media(max-width: 500px) {
     .form .column {
         flex-wrap: wrap;

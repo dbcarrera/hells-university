@@ -118,3 +118,11 @@
 .buttons button:hover {
     background-color: #1F4276;
 }
+
+@media(max-width: 1100px) {
+    .item .content {
+        height: 75%;
+        width: 37.5%;
+        transform: translate(-15%, -50%);
+    }
+}

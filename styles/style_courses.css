@@ -13,7 +13,7 @@
     position: absolute;
     width: 100%;
     height: auto;
-    transform: translateX(-100%) translateY(34%);
+    transform: translateY(-99%);
 }
 
 /* For glass morphism. */
