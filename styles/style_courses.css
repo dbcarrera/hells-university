@@ -18,7 +18,7 @@
 
 /* For glass morphism. */
 .card {
-    animation: showcontent 1s ease;
+    animation: showcontent 1.5s ease;
     position: absolute;
     /* Sizing and colors. */
     width: 30%;

@@ -1,6 +1,18 @@
 /* For Contact page */
+body {
+    background-image: linear-gradient(140deg, #dfdfdf, #202020, #0A0A0A);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.background-image {
+    animation: showcontent 1.5s ease;
+    padding-top: 90px;
+    height: 130dvh;
+}
+
 .container {
-    animation: showcontent 1s ease;
+    animation: showcontent 0.8s ease;
     position: absolute;
     top: 120px;
     right: 0px;
@@ -42,7 +54,7 @@
     margin-top: 8px;
     border: 1px solid #ddd;
     border-radius: 6px;
-    padding: 0 15px; /* TODO: Courses gap is caused due to this padding. How to fix? */
+    padding: 0px 15px;
 }
 
 .form .column {
@@ -83,9 +95,11 @@
 
 .course :where(input, .select-box) {
     margin-top: 15px;
+    padding: 0px 0px;
 }
 
 .select-box select {
+    padding: 0px 15px;
     height: 100%;
     width: 100%;
     outline: none;
@@ -115,6 +129,12 @@
 
 .form :where(.gender-option, .gender) {
     row-gap: 15px;
+}
+
+footer {
+    position: absolute;
+    top: 1080px;
+    color: white;
 }
 
 @media(max-width: 500px) {
