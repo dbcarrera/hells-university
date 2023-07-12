@@ -150,6 +150,7 @@ dialog {
     background-color: #1B1919;
     color: white;
     border: none;
+    outline: none;  /* Removes white outline/borders around the button. */
     transform: translateY(100%) translateX(50%) scale(2);
 }
 
