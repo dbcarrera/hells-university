@@ -41,10 +41,6 @@ footer {
     right: 0px;
 }
 
-.logo {
-    cursor: pointer;
-}
-
 .nav-link li a.active-nav {
     color: #aa1400;
 }

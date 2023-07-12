@@ -7,6 +7,7 @@
 
     <!--Links stylesheet.-->
     <link rel="stylesheet" href="styles/style_main.css">
+    <link rel="stylesheet" href="styles/style_welcome.css">
 
     <!--Adds favicon.-->
     <link rel="icon" type="image/x-icon" href="/assets/default_logo.png">
@@ -25,7 +26,37 @@
 
     <main>
         <!--Applies the art made for the welcome page-->
-        <img class="fullscreen-img" src="assets/welcome.svg" alt="Main Page">
+        <div class="overlay">
+
+            <!--Grey diagonal through half of the screen that houses text and ramsay-->
+            <div class="triangle"></div>
+
+            <!--Logo with white background-->
+            <div class="header-background">
+                <img class="large-logo" src="assets/large_logo.png" alt="Main Logo">
+            </div>
+
+            <!--Kitchen and ramsay images-->
+            <img class="kitchen-img" src="assets/expensive_restaurant.jpeg" alt="Restaurant image">
+            <img class="ramsay-fade-img" src="assets/ramsay_fade.png" alt="Gordon Ramsay">
+
+            <!--Text info-->
+            <h2 class="main-text">
+                25 Years of Perfecting Cuisine
+            </h2>
+            <p class="body-text">
+                Founded alongside Gordon Ramsay's first restaurant in 1998.
+            </p>
+
+            <!--Container for the Michelin stars.-->
+            <div class="michelin-container">
+                <img class="star" src="assets/michelin_star.png" alt="Star">
+                <img class="star" src="assets/michelin_star.png" alt="Star">
+                <img class="star" src="assets/michelin_star.png" alt="Star">
+                <p class="michelin-text">The highest rated culinary<br>university in the world.</p>
+            </div>
+            
+        </div>
     </main>
 
     <!--Creates the copyright footer at the bottom that displays copyright and location information, as well as a disclaimer.-->
