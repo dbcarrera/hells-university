@@ -5,17 +5,21 @@ class CourseModal extends HTMLElement {
     }
 
     connectedCallback() {
+        const duration = this.getAttribute('duration') || '3';
+        const courseTitle = this.getAttribute('courseTitle') || 'Saucier';
+
+
         this.innerHTML = `
         <img class="modal-background" src="assets/course_modal_background.png"
             alt="Modal Background Image">
         <header class="modal-header">
             <button class="material-symbols-outlined dark" data-close-modal>arrow_back_ios_new</button>
-            <h3>Saucier</h3>
+            <h3>${courseTitle}</h3>
         </header>
 
         <div>
             <h4 class="modal-text">Duration</h4>
-            <h4 class="modal-medium-text">3 years</h4>
+            <h4 class="modal-medium-text">${duration} years</h4>
 
             <h4 class="modal-text">Intakes</h4>
             <h4 class="modal-medium-text">Jan, Feb, May, Aug, Nov</h4>
@@ -70,6 +74,7 @@ function closeModal(modal) {
 // Whenever user clicks on the Read More button, it opens the modal.
 openButtonArray.forEach(button => {
     button.addEventListener("click", () => {
+        // Gets index of the pressed button and uses it to get the specific modal to open.
         index = button.getAttribute('data-id') - 1;
         modal = modalArray[index];
 
@@ -88,10 +93,12 @@ openButtonArray.forEach(button => {
             };
         });
 
+        // Gets all close buttons and uses the one the current index is on.
         const closeButtonArray = document.querySelectorAll("[data-close-modal]");
         closeButton = closeButtonArray[index];
         console.log(closeButton);
 
+        // If current close button is clicked, the modal will be closed and trasitioned back.
         closeButton.addEventListener("click", () => {
             modal.close();
             modal.style.opacity = "0"
@@ -99,14 +106,6 @@ openButtonArray.forEach(button => {
         });
     });
 });
-
-
-
-
-
-// // Closes modal.
-
-
 
 
 // Defines this custom header as a custom element.
