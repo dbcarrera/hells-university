@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Links stylesheet.-->
+    <link rel="stylesheet" href="styles/style_main.css">
+    <link rel="stylesheet" href="styles/style_campus.css">
+
+    <!--Adds favicon.-->
+    <link rel="icon" type="image/x-icon" href="/assets/default_logo.png">
+
+    <!--Symbol assets.-->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+
+    <!--Imports icons.-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <title>Hell's University - Campus</title>
+</head>
+
+
+
+<body>
+    <!--Creates the top header navigation bar that sticks as you scroll down.-->
+    <header-main></header-main>
+    <!--Adds chatbot.-->
+    <custom-chatbot></custom-chatbot>
+
+    <div class="container">
+        <div id="slide">
+
+            <div class="item" data-image-path="assets/library.jpg">
+                <div class="content">
+                    <div class="name">Library</div>
+                    <div class="des">Our campus contains the largest library in the United States for
+                        cooking-related material.
+                        Students are provided with terminals where they can search for
+                        any books they need, based on the name or even a topic.
+                        This library is open 24/7, so any student can come in at any time
+                        to read.</div>
+                </div>
+            </div>
+
+            <div class="item" data-image-path="assets/campus_2.jpg">
+                <div class="content">
+                    <div class="name">The Campus</div>
+                    <div class="des">Established 25 years ago, Hell's University has been at the forefront of kitchen
+                        equipment, ensuring all students have access to the best tools available for learning at all
+                        times. Our campus also contains the largest cooking-related library in the United States.</div>
+                </div>
+            </div>
+
+            <div class="item" data-image-path="assets/expensive_restaurant.jpeg">
+                <div class="content">
+                    <div class="name">Public Kitchen</div>
+                    <div class="des">One of the seven kitchens available to all students during lectures.
+                        Students may also book time to refine their skills, either alone or with a group.
+                        These kitchens are fitted with state-of-the-art equipment, meant to simulate a
+                        real-world experience in a restaurant.</div>
+                </div>
+            </div>
+
+            <div class="item" data-image-path="assets/dorm.jpg">
+                <div class="content">
+                    <div class="name">Dorm</div>
+                    <div class="des">All students are given the option of staying on-campus in a
+                        dorm, which may be added on top of the course fee.
+                        These dorms have a modern interior, with spacious rooms. It
+                        also contains a well-equipped kitchen for cooking meals at
+                        your own discretion.
+                        Dorms are protected by security patrols to ensure the area
+                        is safe for students.</div>
+                </div>
+            </div>
+
+        </div>
+        <div class="buttons">
+            <button id="prev"><i class="fa-solid fa-angle-left"></i></button>
+            <button id="next"><i class="fa-solid fa-angle-right"></i></button>
+        </div>
+    </div>
+
+    <!--Creates the copyright footer at the bottom that displays copyright and location information, as well as a disclaimer.-->
+    <footer-main></footer-main>
+
+    <!--Custom header and footer elements and script for chatbot-->
+    <script defer src="components/header.js"></script>
+    <script defer src="components/footer.js"></script>
+    <script defer src="components/chatbot_element.js"></script>
+    <script defer src="scripts/chatbot.js"></script>
+
+    <!--Script for animations.-->
+    <script defer src="scripts/campus_script.js"></script>
+
+    <!--Script to add image backgrounds without inline css.-->
+    <script defer src="scripts/campus_img_background.js"></script>
+
+</body>
+
+</html>

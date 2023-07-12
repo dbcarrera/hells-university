@@ -67,6 +67,7 @@
 }
 
 .fullscreen-img {
+    animation: showcontent 1s ease;
     width: 100%;
     height: auto;
 }
@@ -78,6 +79,7 @@
 
 /* For the chatbot */
 .chatbot-toggler {
+    animation: showcontent 1s ease;
     position: fixed;
     right: 40px;
     bottom: 35px;
@@ -260,5 +262,20 @@
 
     .chatbot header span {
         display: block;
+    }
+}
+
+@keyframes showcontent {
+    from {
+        opacity: 0;
+        transform: translate(0, 100px);
+        filter: blur(50px) brightness(0%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(0, 0);
+        filter: blur(0) brightness(100%);
+
     }
 }

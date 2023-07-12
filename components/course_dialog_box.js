@@ -44,6 +44,11 @@ class CourseModal extends HTMLElement {
 
             <h4 class="modal-button-small-text">Contact us to find out more or to enroll.<br>
                 Exceptions may occur for some requirements.</h4>
+
+                <div class="fees">
+                    <h4 class="modal-text">Structure and Fees</h4>
+                    <h4 class="modal-medium-text">This course requires 120 credit hours to graduate, with each credit hour costing $1000.</h4>
+                </div>
             </div>
         `;
     }
@@ -61,6 +66,7 @@ var modal = modalArray[0];
 function openModal(modal) {
     modal.showModal();
     modal.style.opacity = "1";
+    modal.style.filter = "blur(0px)";
     modal.style.transform = "translateY(0%)";
 }
 
@@ -68,6 +74,7 @@ function openModal(modal) {
 function closeModal(modal) {
     modal.close();
     modal.style.opacity = "0";
+    modal.style.filter = "blur(30px)";
     modal.style.transform = "translateY(25%)";
 }
 
@@ -100,9 +107,7 @@ openButtonArray.forEach(button => {
 
         // If current close button is clicked, the modal will be closed and trasitioned back.
         closeButton.addEventListener("click", () => {
-            modal.close();
-            modal.style.opacity = "0"
-            modal.style.transform = "translateY(25%)"
+            closeModal(modal);
         });
     });
 });
