@@ -114,14 +114,12 @@
 dialog {
     height: 90%;
     width: 43%;
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
+    top: 5%;
+    left: 28.75%;
     background: white;
-    border-color: white;
+    border-color: rgb(225, 225, 225);
     border-radius: 15px;
     opacity: 0;
-    transform: translateY(25%);
     transition: 0.5s ease;
     overflow-x: hidden;
     justify-content: space-around;
@@ -136,14 +134,14 @@ dialog {
 
     dialog {
         width: 90%;
+        left: 5%;
     }
 }
 
 /* Modals (Pop up boxes for more course info) */
 .modal-background {
     z-index: -1;
-    transform: translateY(32%) translateX(39.7%);
-    scale: 250%;
+    transform: translateY(80%) translateX(100%) scale(2.5);
     object-fit: cover;
 }
 
@@ -152,8 +150,7 @@ dialog {
     background-color: #1B1919;
     color: white;
     border: none;
-    scale: 2;
-    transform: translateY(50%) translateX(20%);
+    transform: translateY(100%) translateX(50%) scale(2);
 }
 
 /* Removes white outline when closing modal. */

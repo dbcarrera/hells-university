@@ -81,6 +81,7 @@
     float: none;
 }
 
+/* Jamie Oliver image */
 .image-section {
     animation: showcontent 2.5s ease;
     float: right;
@@ -112,11 +113,13 @@
     margin-bottom: 45px;
 }
 
+/* Past Alumni title */
 .content-section h2 {
     color: #aa1400;
     font-size: 70px;
 }
 
+/* Adds some responsiveness */
 @media screen and (max-width: 1180px) {
     .about {
         width: 100%;

@@ -142,6 +142,7 @@ body {
 /* Custom footer to ensure the contact container doesnt overlap */
 footer {
     position: absolute;
+    width: 100%;
     top: 1080px;
     color: white;
     background-color: transparent;
