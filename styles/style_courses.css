@@ -54,10 +54,11 @@
     display: none;
 }
 
-/* Content of the  */
+/* Read More button */
 .card .content a {
     position: absolute;
     display: inline-block;
+    text-align: center;
     font-size: 2dvh;
     padding: 2% 40%;
     margin-top: 15px;
@@ -115,16 +116,125 @@ dialog {
     left: 50%;
     translate: -50% -50%;
     background: white;
-    border-radius: 0.25rem;
+    border-color: white;
+    border-radius: 15px;
     opacity: 0;
     transform: translateY(25%);
     transition: 0.5s ease;
+    overflow-x: hidden;
+    justify-content: space-around;
 }
 
-/* Moves "Read More" to the top if the screen is too small. */
+/* Moves "Read More" to the top if the screen is too small and increases size of dialog. */
 @media(max-width: 1000px) {
     .card:hover .content a {
         bottom: 92.5%;
         opacity: 1;
     }
+
+    dialog {
+        width: 90%;
+    }
+}
+
+/* Modals (Pop up boxes for more course info) */
+.modal-background {
+    z-index: -1;
+    transform: translateY(32%) translateX(39.7%);
+    scale: 250%;
+    object-fit: cover;
+}
+
+/* Back button. */
+.card .content button {
+    background-color: #1B1919;
+    color: white;
+    border: none;
+    scale: 2;
+    transform: translateY(50%) translateX(20%);
+}
+
+/* Removes white outline when closing modal. */
+.card .content button:active {
+    border: none;
+}
+
+/* Header for the course modal. */
+.modal-header {
+    background-color: #1B1919;
+    height: 80px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+/* Words on the modal header. */
+.modal-header h3 {
+    position: absolute;
+    transform: translateY(-15%) translateX(-50%);
+    left: 50%;
+    font-size: 4dvh;
+    color: #fff;
+}
+
+/* Changes text */
+.modal-text {
+    margin-top: 4%;
+    margin-left: 3%;
+    font-size: 2.75dvh;
+    color: black;
+}
+
+.modal-medium-text {
+    margin-left: 3%;
+    color: black;
+    font-size: 2.25dvh;
+}
+
+
+.modal-small-text {
+    margin-left: 3%;
+    color: black;
+    font-size: 1.5dvh;
+}
+
+.modal-li-small-text {
+    color: black;
+    font-size: 1.5dvh;
+}
+
+/* For the button. */
+.modal-button-small-text {
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: black;
+    font-size: 1.5dvh;
+    text-align: center;
+}
+
+.card .content a.modal-button {
+    position: absolute;
+    font-size: 2dvh;
+    padding: 2% 10%;
+    background: #AA1400;
+    color: white;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: 10%;
+    opacity: 1;
+}
+
+/* Disables animation. */
+.card .content a.modal-button:hover {
+    bottom: 10%;
+    opacity: 1;
+}
+
+/* List item in unordered list within the HTML. */
+.card .content li {
+    margin-top: 1.5%;
+    margin-left: 5.5%;
+    color: black;
+    font-size: 2.25dvh;
 }
