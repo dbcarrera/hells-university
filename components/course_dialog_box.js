@@ -42,25 +42,38 @@ class CourseModal extends HTMLElement {
                 Exceptions may occur for some requirements.</h4>
             </div>
         `;
+    }
+}
 
-        // Gathers all the buttons that are meant to open modals.
-        const openButton = document.querySelector("[data-open-modal]");
-        const closeButton = document.querySelector("[data-close-modal]");
-        const modal = document.querySelector("[data-modal]");
+// Gathers all the buttons that are meant to open modals.
+const openButtonArray = document.querySelectorAll("[data-open-modal]");
+const modalArray = document.querySelectorAll("[data-modal]");
 
-        // Whenever user clicks on the Read More button, it opens the modal.
-        openButton.addEventListener("click", () => {
-            modal.showModal();
-            modal.style.opacity = "1"
-            modal.style.transform = "translateY(0%)"
-        });
+var index = 0;
+var modal = modalArray[0];
 
-        // Closes modal.
-        closeButton.addEventListener("click", () => {
-            modal.close();
-            modal.style.opacity = "0"
-            modal.style.transform = "translateY(25%)"
-        });
+
+// Function to open a specific modal.
+function openModal(modal) {
+    modal.showModal();
+    modal.style.opacity = "1";
+    modal.style.transform = "translateY(0%)";
+}
+
+// Function to close the current modal.
+function closeModal(modal) {
+    modal.close();
+    modal.style.opacity = "0";
+    modal.style.transform = "translateY(25%)";
+}
+
+// Whenever user clicks on the Read More button, it opens the modal.
+openButtonArray.forEach(button => {
+    button.addEventListener("click", () => {
+        index = button.getAttribute('data-id') - 1;
+        modal = modalArray[index];
+
+        openModal(modal);
 
         // Whenever user clicks off the modal it will close it.
         modal.addEventListener("click", e => {
@@ -71,13 +84,30 @@ class CourseModal extends HTMLElement {
                 e.clientY < dialogDimensions.top ||
                 e.clientY > dialogDimensions.bottom
             ) {
-                modal.close();
-                modal.style.opacity = "0"
-                modal.style.transform = "translateY(25%)"
+                closeModal(modal);
             };
         });
-    }
-}
+
+        const closeButtonArray = document.querySelectorAll("[data-close-modal]");
+        closeButton = closeButtonArray[index];
+        console.log(closeButton);
+
+        closeButton.addEventListener("click", () => {
+            modal.close();
+            modal.style.opacity = "0"
+            modal.style.transform = "translateY(25%)"
+        });
+    });
+});
+
+
+
+
+
+// // Closes modal.
+
+
+
 
 // Defines this custom header as a custom element.
 customElements.define('course-modal', CourseModal);
