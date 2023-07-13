@@ -128,7 +128,7 @@
     }
 
     .container {
-        height: 130dvh;
+        height: 150dvh;
     }
 }
 
@@ -148,7 +148,7 @@
         width: 80%;
         display: block;
         margin: auto;
-        height: 130dvh;
+        height: 135dvh;
         padding-top: 50px;
     }
     
