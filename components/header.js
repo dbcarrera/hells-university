@@ -8,10 +8,7 @@ class Header extends HTMLElement {
         // Gets the path name of the window.
         const windowPathName = window.location.pathname;
         // Bool whether you are currently on the welcome page or not.
-        var isWelcomePage = false;
-        if (windowPathName.includes('index.html') || windowPathName == '/hells-university/') {
-            isWelcomePage = true;
-        }
+        var isWelcomePage = windowPathName.includes('index.html') || windowPathName == '/';
 
         this.innerHTML = `
         <header class="header-main">
@@ -44,13 +41,15 @@ class Header extends HTMLElement {
 
         navLinkElems.forEach(navLinkElem => {
             // Checks all of the elements on the navbar, and if it matches the name of the page it will be highlighted with the active-nav class.
-            if (navLinkElem.href.includes(windowPathName)) {
+            if (navLinkElem.href.includes(windowPathName) && !isWelcomePage) {
 
                 navLinkElem.classList.add('active-nav');
             }
         });
 
         if (isWelcomePage) {
+            // Highlights the Welcome only if on welcome page
+            navLinkElems[0].classList.add('active-nav');
             // If if you are on the welcome page, adds the welcome-page class to decrease size of the navbar.
             this.querySelector('header').classList.add('welcome-page');
             // Removes the logo element from the navbar.
