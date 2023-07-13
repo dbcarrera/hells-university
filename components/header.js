@@ -9,6 +9,8 @@ class Header extends HTMLElement {
         const windowPathName = window.location.pathname;
         // Bool whether you are currently on the welcome page or not.
         var isWelcomePage = windowPathName.includes('index.html') || windowPathName == '/' || windowPathName == '/hells-university/';
+        console.log(windowPathName);
+        console.log(isWelcomePage);
 
         this.innerHTML = `
         <header class="header-main">
