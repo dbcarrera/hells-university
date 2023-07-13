@@ -1,5 +1,5 @@
 .about{
-    padding-top: 90px;
+    padding-top: 7.5%;
     width: 100%;
     height: 100vh;
     background-color: #fff;
@@ -120,11 +120,24 @@
 }
 
 /* Adds some responsiveness */
-@media screen and (max-width: 1180px) {
+@media(max-width: 1500px) {
     .about {
         width: 100%;
         height: auto;
-        padding: 70px 0px;
+        padding: 10% 0px;
+    }
+
+    .container {
+        height: 120dvh;
+    }
+}
+
+
+@media screen and (max-width: 1000px) {
+    .about {
+        width: 100%;
+        height: auto;
+        padding: 20% 0px;
     }
     .text h2 {
         font-size: 60px;
